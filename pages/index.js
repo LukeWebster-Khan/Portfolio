@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import { BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -11,14 +12,34 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <div className={styles.description__container}></div>
-        <h1 className={styles.title}>Luke Webster-Khan</h1>
+      <main className={styles.hero}>
+        <div className={styles.hero__left_container}>
+          <h1 className={styles.title}>Hi! I&apos;m Luke Webster-Khan</h1>
 
-        <h3 className={styles.description}>Software Developer</h3>
-        <h4 className={styles.description}>Welcome to my portfolio site</h4>
+          <h3 className={styles.description}>
+            I&apos;m a software Developer with a burning passion for creating
+            and building things. I always looking to try new things but I love
+            working with NextJS!
+          </h3>
+          <div className={styles.socials}>
+            <div className={styles.socials__wrapper}>
+              <BsGithub className={styles.socials__icon} />
+              <BsLinkedin className={styles.socials__icon} />
+              <BsMailbox className={styles.socials__icon} />
+            </div>
+          </div>
+        </div>
+        <div>
+          <Image
+            src="/luke_color.jpg"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+            className={styles.image}
+          />
+        </div>
 
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -46,7 +67,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
       <footer className={styles.footer}>
