@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import { BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,15 +18,27 @@ export default function Home() {
           <h1 className={styles.title}>Hi! I&apos;m Luke Webster-Khan</h1>
 
           <h3 className={styles.description}>
-            I&apos;m a software Developer with a burning passion for creating
-            and building things. I always looking to try new things but I love
-            working with NextJS!
+            I&apos;m a software Developer with a <span>burning</span> passion
+            for creating and building things. I always looking to try new things
+            but I love working with NextJS!
           </h3>
           <div className={styles.socials}>
             <div className={styles.socials__wrapper}>
-              <BsGithub className={styles.socials__icon} />
-              <BsLinkedin className={styles.socials__icon} />
-              <BsMailbox className={styles.socials__icon} />
+              <Link href="https://github.com/LukeWebster-Khan">
+                <a>
+                  <BsGithub className={styles.socials__icon} />
+                </a>
+              </Link>
+              <Link href="https://www.linkedin.com/in/luke-webster-khan-624829213/">
+                <a>
+                  <BsLinkedin className={styles.socials__icon} />
+                </a>
+              </Link>
+              <Link href="mailto:lukewebsterkhan@gmail.com">
+                <a>
+                  <BsMailbox className={styles.socials__icon} />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
