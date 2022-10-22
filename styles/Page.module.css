@@ -1,0 +1,12 @@
+.about {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  min-height: 80vh;
+  scroll-behavior: smooth;
+}
+.about__desc {
+  font-size: 20px;
+}/*# sourceMappingURL=page.module.css.map */

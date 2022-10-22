@@ -1,7 +1,9 @@
 * {
   margin: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .description {
   &__container {
     background-color: yellow;

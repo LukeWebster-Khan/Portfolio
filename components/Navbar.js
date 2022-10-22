@@ -11,19 +11,19 @@ const Navbar = (props) => {
         <div className={styles.nav__wrapper}>
           <h1 className={styles.nav}>Navbar</h1>
           <ul className={styles.nav__link_list}>
-            <Link href="">
+            <Link href="#home" scroll={false}>
               <a className={styles.nav__link}>Home</a>
             </Link>
-            <Link href="">
+            <Link href="#about" scroll={false}>
               <a className={styles.nav__link}>About</a>
             </Link>
-            <Link href="">
+            <Link href="" scroll={false}>
               <a className={styles.nav__link}>Skills</a>
             </Link>
-            <Link href="">
+            <Link href="" scroll={false}>
               <a className={styles.nav__link}>Projects</a>
             </Link>
-            <Link href="">
+            <Link href="" scroll={false}>
               <a className={styles.nav__link}>Contact</a>
             </Link>
           </ul>
@@ -52,23 +52,26 @@ const Navbar = (props) => {
               <ul className={styles.nav__mobile_link_list}>
                 <div>Take a look at these here menu options...</div>
                 <hr></hr>
-                <Link href="">
+                <Link href="" scroll={false}>
                   <a className={styles.nav__link}>Home</a>
                 </Link>
-                <Link href="">
-                  <a className={styles.nav__link}>About</a>
+                <Link href="#about" scroll={false}>
+                  <a className={styles.nav__link} onClick={props.handleNav}>
+                    About
+                  </a>
                 </Link>
-                <Link href="">
+                <Link href="" scroll={false}>
                   <a className={styles.nav__link}>Skills</a>
                 </Link>
-                <Link href="">
+                <Link href="" scroll={false}>
                   <a className={styles.nav__link}>Projects</a>
                 </Link>
-                <Link href="">
+                <Link href="" scroll={false}>
                   <a className={styles.nav__link}>Contact</a>
                 </Link>
               </ul>
               <div className={styles.nav__mobile_bottom}>
+                <hr></hr>
                 <div>
                   <h1 className={styles.title}>Get in Touch!</h1>
                 </div>

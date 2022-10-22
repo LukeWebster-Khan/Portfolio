@@ -65,13 +65,15 @@ $color-primary: #0070f3; // This is a local variable
     max-width: 1100px;
     margin: 0 auto;
     font-family: "Anek Malayalam";
-    margin-bottom: 40px;
+    // margin-bottom: 40px;x
   }
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    position: fixed;
+    width: 100%;
   }
   &__link_list {
     @include mobile {
@@ -121,6 +123,7 @@ $color-primary: #0070f3; // This is a local variable
   }
 }
 .hero {
+  height: 70vh;
   @include mobile-small {
     flex-direction: column;
   }
@@ -132,6 +135,7 @@ $color-primary: #0070f3; // This is a local variable
     align-self: center;
     flex-direction: column;
     width: 50%;
+    height: 100%;
     @include mobile-small {
       width: 100%;
     }
@@ -148,13 +152,13 @@ $color-primary: #0070f3; // This is a local variable
   }
   @keyframes shake {
     0% {
-      transform: rotate(1.5deg);
+      transform: rotate(2.5deg);
     }
     50% {
       transform: rotate(-0.5deg);
     }
     100% {
-      transform: rotate(1.5deg);
+      transform: rotate(2.5deg);
     }
   }
   &__image_wrapper {
@@ -199,6 +203,7 @@ $color-primary: #0070f3; // This is a local variable
   font-family: "Anek Malayalam";
   max-width: 1100px;
   margin: 0 auto;
+  height: 100vh;
   @include mobile-small {
     padding: 0 1rem;
   }
@@ -234,7 +239,8 @@ $color-primary: #0070f3; // This is a local variable
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 2rem;
-  display: none;
+  position: fixed;
+  bottom: 0;
   &__link {
     text-decoration: none;
   }
@@ -242,4 +248,10 @@ $color-primary: #0070f3; // This is a local variable
 
 .hidden {
   display: none;
+}
+
+.style-test {
+  height: 500px;
+  width: 500px;
+  background: pink;
 }

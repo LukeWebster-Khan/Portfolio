@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.scss";
 import { BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import About from "../components/About";
 
 export default function Home(props) {
   const [nav, setNav] = useState(false);
@@ -22,14 +23,14 @@ export default function Home(props) {
         </Head>
 
         <main className={styles.container}>
-          <div className={styles.hero}>
+          <div className={styles.hero} id="home">
             <div className={styles.hero__left_container}>
               <h1 className={styles.title}>Hi! I&apos;m Luke Webster-Khan</h1>
 
               <h3 className={styles.description}>
                 I&apos;m a software Developer with a{" "}
                 <div className={styles.hero__span}>
-                  <span id="canvas">burning</span>{" "}
+                  {!nav ? <span id="canvas">burning</span> : ""}
                 </div>
                 passion for creating and building things. I&apos;m always
                 looking to try new things but I love working with NextJS!
@@ -55,13 +56,17 @@ export default function Home(props) {
               </div>
             </div>
             <div className={styles.hero__image_wrapper}>
-              <Image
-                src="/luke_color.jpg"
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                className={styles.image}
-              />
+              {!nav ? (
+                <Image
+                  src="/luke_color.jpg"
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={styles.image}
+                />
+              ) : (
+                ""
+              )}
             </div>
 
             {/* <div className={styles.grid}>
@@ -94,6 +99,7 @@ export default function Home(props) {
           </a>
         </div> */}
           </div>
+          <About />
         </main>
 
         <footer className={styles.footer}>
