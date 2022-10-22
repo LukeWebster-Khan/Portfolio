@@ -1,13 +1,163 @@
 $color-primary: #0070f3; // This is a local variable
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile-small {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+.nav {
+  &__mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: gray;
+    width: 100%;
+    height: -webkit-fill-available;
+    transition: width 0.5s ease-in-out;
+    &_wrapper {
+      position: fixed;
+      padding: 1em;
+      left: 0;
+      top: 0;
+      width: 60%;
+      height: 100%;
+      background-color: white;
+      transition: width 0.5s ease-in-out;
+      &_hidden {
+        left: -100vw;
+      }
+    }
+    &_top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &_link_list {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    &_close {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    &_bottom {
+      margin-top: 30px;
+      padding: 0 30px;
+    }
+    &_hidden {
+      left: -100vw;
+    }
+  }
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: "Anek Malayalam";
+    margin-bottom: 40px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  &__link_list {
+    @include mobile {
+      display: none;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: inherit;
+
+    &:hover {
+      animation: wiggle 0.5s ease-in-out;
+      -webkit-animation: wiggle 0.5s ease-in-out;
+      animation-iteration-count: infinite;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    @keyframes wiggle {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  &__burger {
+    display: none;
+    margin-right: 20px;
+    &_wrapper {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+    }
+    @include mobile {
+      display: block;
+    }
+  }
+}
 .hero {
+  @include mobile-small {
+    flex-direction: column;
+  }
   display: flex;
-  padding: 1rem;
+  justify-content: space-between;
   &__left_container {
     display: flex;
     justify-content: center;
     align-self: center;
     flex-direction: column;
     width: 50%;
+    @include mobile-small {
+      width: 100%;
+    }
+  }
+  &__span {
+    margin: 0 5px;
+    color: #fff;
+    text-shadow: 0px -1px 4px white, 0px -2px 10px yellow,
+      0px -10px 20px #ff8000, 0px -18px 40px red;
+    animation: shake 200ms infinite;
+    animation-timing-function: linear;
+    overflow: inherit;
+    display: inline-block;
+  }
+  @keyframes shake {
+    0% {
+      transform: rotate(1.5deg);
+    }
+    50% {
+      transform: rotate(-0.5deg);
+    }
+    100% {
+      transform: rotate(1.5deg);
+    }
+  }
+  &__image_wrapper {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobile-small {
+      width: 100%;
+    }
   }
   h1 {
     text-transform: uppercase;
@@ -21,10 +171,14 @@ $color-primary: #0070f3; // This is a local variable
     );
     background-size: 50% auto;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Poppins", sans-serif;
     font-size: 4vw;
     animation: gradientAnim 7.5s ease alternate infinite;
+    @include mobile {
+      // font-size: 3vw;
+    }
   }
 
   @keyframes gradientAnim {
@@ -36,6 +190,11 @@ $color-primary: #0070f3; // This is a local variable
 .container {
   padding: 0 2rem;
   font-family: "Anek Malayalam";
+  max-width: 1100px;
+  margin: 0 auto;
+  @include mobile-small {
+    padding: 0 1rem;
+  }
 }
 
 .image {
@@ -44,9 +203,17 @@ $color-primary: #0070f3; // This is a local variable
   transform-origin: top;
   border-radius: 30px;
 }
+
 .socials {
   &__wrapper {
+    @include mobile-small() {
+      display: flex;
+      justify-content: space-between;
+    }
     display: inline;
+    a {
+      color: inherit;
+    }
   }
   &__icon {
     font-size: 30px;
@@ -54,4 +221,18 @@ $color-primary: #0070f3; // This is a local variable
   svg {
     padding: 20px;
   }
+}
+
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: none;
+  &__link {
+    text-decoration: none;
+  }
+}
+
+.hidden {
+  display: none;
 }

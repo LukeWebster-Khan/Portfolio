@@ -1,6 +1,50 @@
+.nav__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: "Anek Malayalam";
+  margin-bottom: 40px;
+}
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__link {
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+}
+.nav__link:hover {
+  color: #0070f3;
+  -webkit-animation: wiggle 0.5s;
+          animation: wiggle 0.5s;
+}
+@-webkit-keyframes wiggle {
+  0% {
+    transform: translate(2px, 0);
+  }
+  50% {
+    transform: translate(-2px, 0);
+  }
+  100% {
+    transform: translate(2px, 0);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: translate(2px, 0);
+  }
+  50% {
+    transform: translate(-2px, 0);
+  }
+  100% {
+    transform: translate(2px, 0);
+  }
+}
+
 .hero {
   display: flex;
-  padding: 1rem;
+  justify-content: space-between;
 }
 .hero__left_container {
   display: flex;
@@ -9,11 +53,18 @@
   flex-direction: column;
   width: 50%;
 }
+.hero__image_wrapper {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .hero h1 {
   text-transform: uppercase;
   background-image: linear-gradient(to right top, #ffff34, #ffc812, #ff8f2f, #ff554d, #eb1267);
   background-size: 50% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Poppins", sans-serif;
   font-size: 4vw;
@@ -34,6 +85,8 @@
 .container {
   padding: 0 2rem;
   font-family: "Anek Malayalam";
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .image {
@@ -48,9 +101,21 @@
 .socials__wrapper {
   display: inline;
 }
+.socials__wrapper a {
+  color: inherit;
+}
 .socials__icon {
   font-size: 30px;
 }
 .socials svg {
   padding: 20px;
+}
+
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.footer__link {
+  text-decoration: none;
 }/*# sourceMappingURL=Home.module.css.map */
