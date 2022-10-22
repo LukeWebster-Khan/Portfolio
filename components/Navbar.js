@@ -1,16 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
 
 const Navbar = (props) => {
-  const [nav, setNav] = useState(false);
-  const handleNav = () => {
-    setNav(!nav);
-  };
-
   return (
     <div>
       <div className={styles.nav__container}>
@@ -33,14 +27,14 @@ const Navbar = (props) => {
               <a className={styles.nav__link}>Contact</a>
             </Link>
           </ul>
-          <div className={styles.nav__burger_wrapper} onClick={handleNav}>
+          <div className={styles.nav__burger_wrapper} onClick={props.handleNav}>
             <AiOutlineMenu size={25} className={styles.nav__burger} />
           </div>
         </div>
-        <div className={nav ? styles.nav__mobile : styles.hidden}>
+        <div className={props.nav ? styles.nav__mobile : styles.hidden}>
           <div
             className={
-              nav
+              props.nav
                 ? styles.nav__mobile_wrapper
                 : styles.nav__mobile_wrapper_hidden
             }
@@ -48,7 +42,10 @@ const Navbar = (props) => {
             <div>
               <div className={styles.nav__mobile_top}>
                 <h1 className={styles.nav}>Navbar</h1>
-                <div className={styles.nav__mobile_close} onClick={handleNav}>
+                <div
+                  className={styles.nav__mobile_close}
+                  onClick={props.handleNav}
+                >
                   <AiOutlineClose width={50} height={50} />
                 </div>
               </div>

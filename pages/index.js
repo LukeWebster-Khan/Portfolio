@@ -1,15 +1,19 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 import styles from "../styles/Home.module.scss";
 import { BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 
 export default function Home(props) {
-  console.log(props.nav);
+  const [nav, setNav] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+  };
   return (
     <>
-      <Navbar />
+      <Navbar nav={nav} handleNav={handleNav} />
       <div className={styles.container}>
         <Head>
           <title>Luke Webster-Khan Portfolio</title>
