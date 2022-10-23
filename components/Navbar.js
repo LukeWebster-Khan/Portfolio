@@ -52,8 +52,10 @@ const Navbar = (props) => {
               <ul className={styles.nav__mobile_link_list}>
                 <div>Take a look at these here menu options...</div>
                 <hr></hr>
-                <Link href="" scroll={false}>
-                  <a className={styles.nav__link}>Home</a>
+                <Link href="#home" scroll={false}>
+                  <a className={styles.nav__link} onClick={props.handleNav}>
+                    Home
+                  </a>
                 </Link>
                 <Link href="#about" scroll={false}>
                   <a className={styles.nav__link} onClick={props.handleNav}>
