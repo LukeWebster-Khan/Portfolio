@@ -12,6 +12,7 @@ export default function Home(props) {
   const handleNav = () => {
     setNav(!nav);
   };
+
   return (
     <>
       <Navbar nav={nav} handleNav={handleNav} />
@@ -24,14 +25,14 @@ export default function Home(props) {
 
         <main className={styles.container}>
           <div className={styles.hero} id="home">
-            <div className={styles.hero__left_container}>
+            <section className={styles.hero__left_container}>
               <h1 className={styles.title}>Hi! I&apos;m Luke Webster-Khan</h1>
 
               <h3 className={styles.description}>
                 I&apos;m a software Developer with a{" "}
                 <div className={styles.hero__span}>
                   {!nav ? <span id="canvas">burning</span> : ""}
-                </div>
+                </div>{" "}
                 passion for creating and building things. I&apos;m always
                 looking to try new things but I love working with NextJS!
               </h3>
@@ -54,7 +55,8 @@ export default function Home(props) {
                   </Link>
                 </div>
               </div>
-            </div>
+            </section>
+
             <div className={styles.hero__image_wrapper}>
               {!nav ? (
                 <Image
@@ -99,6 +101,7 @@ export default function Home(props) {
           </a>
         </div> */}
           </div>
+          <hr></hr>
           <About />
         </main>
 

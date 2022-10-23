@@ -4,6 +4,17 @@
 html {
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: slategray;
+  border: 1px solid white;
+  border-radius: 10px;
+}
 .description {
   &__container {
     background-color: yellow;

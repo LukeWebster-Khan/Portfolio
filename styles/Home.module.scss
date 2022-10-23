@@ -1,6 +1,6 @@
 $color-primary: #0070f3; // This is a local variable
 @mixin mobile {
-  @media (max-width: 768px) {
+  @media (max-width: 888px) {
     @content;
   }
 }
@@ -18,6 +18,7 @@ $color-primary: #0070f3; // This is a local variable
     width: 100%;
     height: -webkit-fill-available;
     transition: width 0.5s ease-in-out;
+    z-index: 13;
     &_wrapper {
       position: fixed;
       padding: 1em;
@@ -74,6 +75,10 @@ $color-primary: #0070f3; // This is a local variable
     padding: 10px;
     position: fixed;
     width: 100%;
+    left: 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px -10px gray;
+    z-index: 13;
   }
   &__link_list {
     @include mobile {
@@ -108,7 +113,7 @@ $color-primary: #0070f3; // This is a local variable
       position: absolute;
       right: 0;
       padding: 10px;
-      margin-right: 40px;
+      margin-right: 40px !important;
       cursor: pointer;
       &:hover {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -123,7 +128,7 @@ $color-primary: #0070f3; // This is a local variable
   }
 }
 .hero {
-  height: 70vh;
+  height: 100vh;
   @include mobile-small {
     flex-direction: column;
   }
@@ -136,6 +141,11 @@ $color-primary: #0070f3; // This is a local variable
     flex-direction: column;
     width: 50%;
     height: 100%;
+    @include mobile {
+      height: 50vh;
+      width: 60%;
+      justify-content: flex-end;
+    }
     @include mobile-small {
       width: 100%;
     }
@@ -143,12 +153,18 @@ $color-primary: #0070f3; // This is a local variable
   &__span {
     margin: 0 5px;
     color: #fff;
-    text-shadow: 0px -1px 4px white, 0px -2px 10px yellow,
+    text-shadow: 0px -1px 4px #e50909, 0px -2px 10px yellow,
       0px -10px 20px #ff8000, 0px -18px 40px red;
     animation: shake 200ms infinite;
     animation-timing-function: linear;
     overflow: inherit;
     display: inline-block;
+    transition: all 1s ease-in-out;
+    transition-property: scale, color;
+    &:hover {
+      scale: 1.2;
+      color: orange;
+    }
   }
   @keyframes shake {
     0% {
@@ -170,7 +186,11 @@ $color-primary: #0070f3; // This is a local variable
       width: 100%;
     }
   }
+  h3 {
+    margin: 10px 0;
+  }
   h1 {
+    margin-top: 10px;
     text-transform: uppercase;
     background-image: linear-gradient(
       to right top,
@@ -188,7 +208,10 @@ $color-primary: #0070f3; // This is a local variable
     font-size: 4vw;
     animation: gradientAnim 7.5s ease alternate infinite;
     @include mobile {
-      // font-size: 3vw;
+      font-size: 8vw;
+    }
+    @include mobile-small {
+      font-size: 10vw;
     }
   }
 

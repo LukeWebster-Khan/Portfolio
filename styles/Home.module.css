@@ -6,6 +6,7 @@
   width: 100%;
   height: -webkit-fill-available;
   transition: width 0.5s ease-in-out;
+  z-index: 13;
 }
 .nav__mobile_wrapper {
   position: fixed;
@@ -63,8 +64,13 @@
   padding: 10px;
   position: fixed;
   width: 100%;
+  left: 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px -10px gray;
+  z-index: 13;
 }
-@media (max-width: 768px) {
+@media (max-width: 888px) {
   .nav__link_list {
     display: none;
   }
@@ -106,7 +112,7 @@
   position: absolute;
   right: 0;
   padding: 10px;
-  margin-right: 40px;
+  margin-right: 40px !important;
   cursor: pointer;
 }
 .nav__burger_wrapper:hover {
@@ -117,14 +123,14 @@
     margin: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 888px) {
   .nav__burger {
     display: block;
   }
 }
 
 .hero {
-  height: 70vh;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
 }
@@ -141,6 +147,13 @@
   width: 50%;
   height: 100%;
 }
+@media (max-width: 888px) {
+  .hero__left_container {
+    height: 50vh;
+    width: 60%;
+    justify-content: flex-end;
+  }
+}
 @media (max-width: 600px) {
   .hero__left_container {
     width: 100%;
@@ -149,13 +162,19 @@
 .hero__span {
   margin: 0 5px;
   color: #fff;
-  text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
+  text-shadow: 0px -1px 4px #e50909, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
   -webkit-animation: shake 200ms infinite;
           animation: shake 200ms infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   overflow: inherit;
   display: inline-block;
+  transition: all 1s ease-in-out;
+  transition-property: scale, color;
+}
+.hero__span:hover {
+  scale: 1.2;
+  color: orange;
 }
 @-webkit-keyframes shake {
   0% {
@@ -190,7 +209,11 @@
     width: 100%;
   }
 }
+.hero h3 {
+  margin: 10px 0;
+}
 .hero h1 {
+  margin-top: 10px;
   text-transform: uppercase;
   background-image: linear-gradient(to right top, #ffff34, #ffc812, #ff8f2f, #ff554d, #eb1267);
   background-size: 50% auto;
@@ -201,6 +224,16 @@
   font-size: 4vw;
   -webkit-animation: gradientAnim 7.5s ease alternate infinite;
           animation: gradientAnim 7.5s ease alternate infinite;
+}
+@media (max-width: 888px) {
+  .hero h1 {
+    font-size: 8vw;
+  }
+}
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 10vw;
+  }
 }
 @-webkit-keyframes gradientAnim {
   to {
