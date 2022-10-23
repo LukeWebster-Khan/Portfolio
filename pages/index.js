@@ -6,6 +6,7 @@ import { BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
+import { motion } from "framer-motion";
 
 export default function Home(props) {
   const [nav, setNav] = useState(false);
@@ -25,7 +26,20 @@ export default function Home(props) {
 
         <main className={styles.container}>
           <div className={styles.hero} id="home">
-            <section className={styles.hero__left_container}>
+            <motion.section
+              initial={{
+                x: -100,
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className={styles.hero__left_container}
+            >
               <h1 className={styles.title}>Hi! I&apos;m Luke Webster-Khan</h1>
 
               <h3 className={styles.description}>
@@ -55,9 +69,22 @@ export default function Home(props) {
                   </Link>
                 </div>
               </div>
-            </section>
+            </motion.section>
 
-            <div className={styles.hero__image_wrapper}>
+            <motion.div
+              initial={{
+                x: 100,
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className={styles.hero__image_wrapper}
+            >
               {!nav ? (
                 <Image
                   src="/luke_color.jpg"
@@ -69,7 +96,7 @@ export default function Home(props) {
               ) : (
                 ""
               )}
-            </div>
+            </motion.div>
 
             {/* <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -101,8 +128,10 @@ export default function Home(props) {
           </a>
         </div> */}
           </div>
-          <hr></hr>
           <About />
+          <div className={styles["under-construction"]}>
+            <h1>Under Construction</h1>
+          </div>
         </main>
 
         <footer className={styles.footer}>

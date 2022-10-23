@@ -278,3 +278,10 @@ $color-primary: #0070f3; // This is a local variable
   width: 500px;
   background: pink;
 }
+.under-construction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // transform: rotate(45deg);
+  height: 100vh;
+}
