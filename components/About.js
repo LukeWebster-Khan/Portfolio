@@ -1,64 +1,81 @@
 import React, { useState } from "react";
 import styles from "../styles/Page.module.scss";
 import data from "../public/about.json";
+import { motion } from "framer-motion";
+import { CSSTransition } from "react-transition-group";
+
 const About = () => {
   const [active, setActive] = useState(0);
+
   const onChange = (e) => {
     setActive(e.target.getAttribute("data-index"));
   };
   return (
-    <section className={styles.about} id="about">
-      <h1>About</h1>
-      <div className={styles.about__container}>
-        <div className={styles.about__buttons}>
-          <button
-            onClick={onChange}
-            className={styles.about__button}
-            data-index="0"
-          >
-            Born
-          </button>
-          <button
-            onClick={onChange}
-            data-index="1"
-            className={styles.about__button}
-          >
-            Growing Up
-          </button>
-          <button
-            onClick={onChange}
-            data-index="2"
-            className={styles.about__button}
-          >
-            School
-          </button>
-          <button
-            onClick={onChange}
-            data-index="3"
-            className={styles.about__button}
-          >
-            Engineering
-          </button>
-          <button
-            onClick={onChange}
-            data-index="4"
-            className={styles.about__button}
-          >
-            Intro to Programming
-          </button>
-          <button
-            onClick={onChange}
-            data-index="5"
-            className={styles.about__button}
-          >
-            AccessPoint
-          </button>
+    <CSSTransition key={1} timeout={250}>
+      <section className={styles.about} id="about">
+        <h1>About</h1>
+        <div className={styles.about__container}>
+          <div className={styles.about__buttons}>
+            <button
+              onClick={onChange}
+              className={styles.about__button}
+              data-index="0"
+            >
+              Born
+            </button>
+            <button
+              onClick={onChange}
+              data-index="1"
+              className={styles.about__button}
+            >
+              Growing Up
+            </button>
+            <button
+              onClick={onChange}
+              data-index="2"
+              className={styles.about__button}
+            >
+              School
+            </button>
+            <button
+              onClick={onChange}
+              data-index="3"
+              className={styles.about__button}
+            >
+              Engineering
+            </button>
+            <button
+              onClick={onChange}
+              data-index="4"
+              className={styles.about__button}
+            >
+              Intro to Programming
+            </button>
+            <button
+              onClick={onChange}
+              data-index="5"
+              className={styles.about__button}
+            >
+              AccessPoint
+            </button>
+          </div>
+          <div className={styles.about__content}>
+            <motion.p
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
+              {data[active].date}
+            </motion.p>
+            <p className={styles.about__desc}>{data[active].desc}</p>
+          </div>
         </div>
-        <div className={styles.about__content}>
-          <p className={styles.about__desc}>{data[active].desc}</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </CSSTransition>
   );
 };
 export default About;
