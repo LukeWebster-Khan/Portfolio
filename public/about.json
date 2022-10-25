@@ -1,25 +1,31 @@
 [
     {
+        "id": "1",
         "date": "Jan 1999 - Dec 2005",
         "desc": "I was born in Bristol"
     },
     {
+        "id": "2",
         "date": "Jan 2006 - Dec 2007",
         "desc": "I have 2 brothers, each one six years apart"
     },
     {
+        "id": "3",
         "date":"Jan 2008 - Dec 2017",
         "desc": "I Went to Clifton College"
     },
     {
+        "id": "4",
         "date":"Jan 2018 - Oct 2020",
         "desc": "I worked as a Civil Engineer"
     },
     {
+        "id": "5",
         "date": "July 2020 - Oct 2020",
         "desc": "I learned to programme using FreeCodeCamp"
     },
     {
+        "id": "6",
         "date": "Sep 2020 - Present",
         "desc": "I work as a Junior Developer at AccessPoint"
     }

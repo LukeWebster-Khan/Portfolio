@@ -148,6 +148,7 @@ $color-primary: #0070f3; // This is a local variable
     }
     @include mobile-small {
       width: 100%;
+      margin-top: 100px;
     }
   }
   &__span {
