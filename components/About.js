@@ -2,11 +2,13 @@ import React, { useState, useRef } from "react";
 import styles from "../styles/Page.module.scss";
 import data from "../public/about.json";
 import { motion } from "framer-motion";
-
+import { SwitchTransition, CSSTransition } from "react-transition-group";
 const About = () => {
   const [active, setActive] = useState(0);
-  const [showMessage, setShowMessage] = useState(true);
-  const nodeRef = useRef(null);
+  const [state, setState] = useState(false);
+  const helloRef = useRef(null);
+  const goodbyeRef = useRef(null);
+  const nodeRef = state ? goodbyeRef : helloRef;
   const onChange = (e) => {
     setActive(e.target.getAttribute("data-index"));
   };
@@ -68,10 +70,19 @@ const About = () => {
             default: { ease: "linear" },
           }}
         >
-          <div>
+          <motion.div
+            className={styles.about__content}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0,
+              x: { duration: 1 },
+              default: { ease: "linear" },
+            }}
+          >
             <p className={styles.about__desc}>{data[active].desc}</p>
             <p>{data[active].date}</p>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

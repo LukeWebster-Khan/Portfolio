@@ -7,6 +7,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import { motion } from "framer-motion";
+import Skills from "../components/Skills";
 
 export default function Home(props) {
   const [nav, setNav] = useState(false);
@@ -99,6 +100,7 @@ export default function Home(props) {
             </motion.div>
           </div>
           <About />
+          <Skills />
           <div className={styles["under-construction"]}>
             <h1>Under Construction</h1>
           </div>
