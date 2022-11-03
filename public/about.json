@@ -2,31 +2,31 @@
     {
         "id": "1",
         "date": "Jan 1999 - Dec 2005",
-        "desc": "I was born in Bristol"
+        "desc": "I was born in Bristol in 1999 and lived there until I was 6 years old.Lorem ipsum dolor sit amet consectetur adipisicing elit. "  
     },
     {
         "id": "2",
         "date": "Jan 2006 - Dec 2007",
-        "desc": "I have 2 brothers, each one six years apart"
+        "desc": "I have 2 brothers, each one six years apartLorem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
         "id": "3",
         "date":"Jan 2008 - Dec 2017",
-        "desc": "I Went to Clifton College"
+        "desc": "I Went to Clifton College Lorem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
         "id": "4",
         "date":"Jan 2018 - Oct 2020",
-        "desc": "I worked as a Civil Engineer"
+        "desc": "I worked as a Civil Engineer Lorem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
         "id": "5",
         "date": "July 2020 - Oct 2020",
-        "desc": "I learned to programme using FreeCodeCamp"
+        "desc": "I learned to programme using FreeCodeCamp Lorem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
         "id": "6",
         "date": "Sep 2020 - Present",
-        "desc": "I work as a Junior Developer at AccessPoint"
+        "desc": "I work as a Junior Developer at AccessPoint Lorem ipsum dolor sit amet consectetur adipisicing elit."
     }
 ]
