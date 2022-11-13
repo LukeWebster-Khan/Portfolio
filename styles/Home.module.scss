@@ -259,6 +259,11 @@ $color-primary: #0070f3; // This is a local variable
   }
   svg {
     padding: 20px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.7);
+      cursor: pointer;
+    }
   }
 }
 
