@@ -3,7 +3,7 @@ import styles from "../styles/Page.module.scss";
 import Image from "next/image";
 const Skills = () => {
   return (
-    <div className={styles.skills}>
+    <div id="skills" className={styles.skills}>
       <h1>Skills</h1>
       <div className={styles.skills__container}>
         <div className={styles["skills__desc-container"]}>

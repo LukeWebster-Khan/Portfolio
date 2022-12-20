@@ -6,10 +6,10 @@ import { BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
 
 const Navbar = (props) => {
   return (
-    <div>
+    <div className={styles.nav}>
       <div className={styles.nav__container}>
         <div className={styles.nav__wrapper}>
-          <h1 className={styles.nav}>Navbar</h1>
+          <h1>Luke Webster-Khan</h1>
           <ul className={styles.nav__link_list}>
             <Link href="#home" scroll={false}>
               <a className={styles.nav__link}>Home</a>
@@ -17,7 +17,7 @@ const Navbar = (props) => {
             <Link href="#about" scroll={false}>
               <a className={styles.nav__link}>About</a>
             </Link>
-            <Link href="" scroll={false}>
+            <Link href="#skills" scroll={false}>
               <a className={styles.nav__link}>Skills</a>
             </Link>
             <Link href="" scroll={false}>
@@ -27,10 +27,12 @@ const Navbar = (props) => {
               <a className={styles.nav__link}>Contact</a>
             </Link>
           </ul>
+
           <div className={styles.nav__burger_wrapper} onClick={props.handleNav}>
             <AiOutlineMenu size={25} className={styles.nav__burger} />
           </div>
         </div>
+
         <div className={props.nav ? styles.nav__mobile : styles.hidden}>
           <div
             className={
@@ -41,7 +43,7 @@ const Navbar = (props) => {
           >
             <div>
               <div className={styles.nav__mobile_top}>
-                <h1 className={styles.nav}>Navbar</h1>
+                <h1>Luke Webster-Khan</h1>
                 <div
                   className={styles.nav__mobile_close}
                   onClick={props.handleNav}
@@ -62,7 +64,7 @@ const Navbar = (props) => {
                     About
                   </a>
                 </Link>
-                <Link href="" scroll={false}>
+                <Link href="skills" scroll={false}>
                   <a className={styles.nav__link}>Skills</a>
                 </Link>
                 <Link href="" scroll={false}>

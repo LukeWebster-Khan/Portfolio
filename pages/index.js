@@ -87,6 +87,7 @@ export default function Home(props) {
               className={styles.hero__image_wrapper}
             >
               {!nav ? (
+                // <div>
                 <Image
                   src="/luke_color.jpg"
                   alt="Picture of the author"
@@ -95,6 +96,16 @@ export default function Home(props) {
                   className={styles.image}
                 />
               ) : (
+                // </div>
+                // <div>TEST DIV</div>
+                // <div className={styles.image__class}>
+                //   <Image
+                //     src="/luke_color.jpg"
+                //     alt="Picture of the author"
+                //     width={500}
+                //     height={500}
+                //   />
+                // </div>
                 ""
               )}
             </motion.div>

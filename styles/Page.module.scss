@@ -1,3 +1,5 @@
+@import "../styles/Home.module.scss";
+
 @mixin mobile {
   @media (max-width: 888px) {
     @content;
@@ -14,6 +16,23 @@
   scroll-behavior: smooth;
   max-width: 600px;
   margin: 0 auto;
+  h1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  h1::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 16px;
+    width: 80%;
+    height: 1px;
+    margin-left: 20px;
+    background-color: gray;
+    @include mobile-small {
+      display: none;
+    }
+  }
   &__container {
     display: flex;
   }
@@ -35,6 +54,7 @@
     &:focus {
       outline: none;
       scale: 1.1;
+      border-left: 2px solid red;
     }
   }
   &__buttons {

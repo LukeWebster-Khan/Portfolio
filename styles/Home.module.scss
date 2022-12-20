@@ -10,6 +10,7 @@ $color-primary: #0070f3; // This is a local variable
   }
 }
 .nav {
+  box-shadow: 0 10px 30px -10px gray;
   &__mobile {
     position: fixed;
     left: 0;
@@ -72,12 +73,11 @@ $color-primary: #0070f3; // This is a local variable
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    position: fixed;
+    padding: 10px 0;
+    // position: fixed;
     width: 100%;
     left: 0;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px -10px gray;
     z-index: 13;
   }
   &__link_list {
@@ -293,4 +293,11 @@ $color-primary: #0070f3; // This is a local variable
   align-items: center;
   // transform: rotate(45deg);
   height: 100vh;
+}
+
+.image__class {
+  display: flex;
+  img {
+    position: unset;
+  }
 }
