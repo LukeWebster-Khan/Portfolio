@@ -54,19 +54,13 @@ export default function Home(props) {
               <div className={styles.socials}>
                 <div className={styles.socials__wrapper}>
                   <Link href="https://github.com/LukeWebster-Khan">
-                    <a>
-                      <BsGithub className={styles.socials__icon} />
-                    </a>
+                    <BsGithub className={styles.socials__icon} />
                   </Link>
                   <Link href="https://www.linkedin.com/in/luke-webster-khan-624829213/">
-                    <a>
-                      <BsLinkedin className={styles.socials__icon} />
-                    </a>
+                    <BsLinkedin className={styles.socials__icon} />
                   </Link>
                   <Link href="mailto:lukewebsterkhan@gmail.com">
-                    <a>
-                      <BsMailbox className={styles.socials__icon} />
-                    </a>
+                    <BsMailbox className={styles.socials__icon} />
                   </Link>
                 </div>
               </div>
@@ -92,20 +86,10 @@ export default function Home(props) {
                   src="/luke_color.jpg"
                   alt="Picture of the author"
                   width={500}
-                  height={500}
+                  height={800}
                   className={styles.image}
                 />
               ) : (
-                // </div>
-                // <div>TEST DIV</div>
-                // <div className={styles.image__class}>
-                //   <Image
-                //     src="/luke_color.jpg"
-                //     alt="Picture of the author"
-                //     width={500}
-                //     height={500}
-                //   />
-                // </div>
                 ""
               )}
             </motion.div>

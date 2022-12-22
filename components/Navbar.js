@@ -11,20 +11,20 @@ const Navbar = (props) => {
         <div className={styles.nav__wrapper}>
           <h1>Luke Webster-Khan</h1>
           <ul className={styles.nav__link_list}>
-            <Link href="#home" scroll={false}>
-              <a className={styles.nav__link}>Home</a>
+            <Link className={styles.nav__link} href="#home" scroll={false}>
+              Home
             </Link>
-            <Link href="#about" scroll={false}>
-              <a className={styles.nav__link}>About</a>
+            <Link className={styles.nav__link} href="#about" scroll={false}>
+              About
             </Link>
-            <Link href="#skills" scroll={false}>
-              <a className={styles.nav__link}>Skills</a>
+            <Link className={styles.nav__link} href="#skills" scroll={false}>
+              Skills
             </Link>
-            <Link href="" scroll={false}>
-              <a className={styles.nav__link}>Projects</a>
+            <Link className={styles.nav__link} href="" scroll={false}>
+              Projects
             </Link>
-            <Link href="" scroll={false}>
-              <a className={styles.nav__link}>Contact</a>
+            <Link className={styles.nav__link} href="" scroll={false}>
+              Contact
             </Link>
           </ul>
 
@@ -54,24 +54,30 @@ const Navbar = (props) => {
               <ul className={styles.nav__mobile_link_list}>
                 <div>Take a look at these here menu options...</div>
                 <hr></hr>
-                <Link href="#home" scroll={false}>
-                  <a className={styles.nav__link} onClick={props.handleNav}>
-                    Home
-                  </a>
+                <Link
+                  className={styles.nav__link}
+                  onClick={props.handleNav}
+                  href="#home"
+                  scroll={false}
+                >
+                  Home
                 </Link>
-                <Link href="#about" scroll={false}>
-                  <a className={styles.nav__link} onClick={props.handleNav}>
-                    About
-                  </a>
+                <Link
+                  className={styles.nav__link}
+                  onClick={props.handleNav}
+                  href="#about"
+                  scroll={false}
+                >
+                  About
                 </Link>
-                <Link href="skills" scroll={false}>
-                  <a className={styles.nav__link}>Skills</a>
+                <Link className={styles.nav__link} href="skills" scroll={false}>
+                  Skills
                 </Link>
-                <Link href="" scroll={false}>
-                  <a className={styles.nav__link}>Projects</a>
+                <Link className={styles.nav__link} href="" scroll={false}>
+                  Projects
                 </Link>
-                <Link href="" scroll={false}>
-                  <a className={styles.nav__link}>Contact</a>
+                <Link className={styles.nav__link} href="" scroll={false}>
+                  Contact
                 </Link>
               </ul>
               <div className={styles.nav__mobile_bottom}>
@@ -82,19 +88,13 @@ const Navbar = (props) => {
                 <div className={styles.socials}>
                   <div className={styles.socials__wrapper}>
                     <Link href="https://github.com/LukeWebster-Khan">
-                      <a>
-                        <BsGithub className={styles.socials__icon} />
-                      </a>
+                      <BsGithub className={styles.socials__icon} />
                     </Link>
                     <Link href="https://www.linkedin.com/in/luke-webster-khan-624829213/">
-                      <a>
-                        <BsLinkedin className={styles.socials__icon} />
-                      </a>
+                      <BsLinkedin className={styles.socials__icon} />
                     </Link>
                     <Link href="mailto:lukewebsterkhan@gmail.com">
-                      <a>
-                        <BsMailbox className={styles.socials__icon} />
-                      </a>
+                      <BsMailbox className={styles.socials__icon} />
                     </Link>
                   </div>
                 </div>

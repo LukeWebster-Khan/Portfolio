@@ -29,12 +29,14 @@ const Skills = () => {
             />
           </div>
           <div className={styles.skills__item}>
-            <Image
-              src="/SASS.png"
-              alt="sass"
-              objectFit="contain"
-              layout="fill"
-            />
+            <span>
+              <Image
+                src="/SASS.png"
+                alt="sass"
+                objectFit="contain"
+                layout="fill"
+              />
+            </span>
           </div>
           <div className={styles.skills__item}>
             <Image

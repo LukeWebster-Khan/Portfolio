@@ -9,6 +9,7 @@ $color-primary: #0070f3; // This is a local variable
     @content;
   }
 }
+
 .nav {
   box-shadow: 0 10px 30px -10px gray;
   &__mobile {
@@ -79,6 +80,14 @@ $color-primary: #0070f3; // This is a local variable
     left: 0;
     backdrop-filter: blur(10px);
     z-index: 13;
+    h1 {
+      @include mobile {
+        font-size: 1.5rem;
+      }
+      @include mobile-small {
+        font-size: 1.3rem;
+      }
+    }
   }
   &__link_list {
     @include mobile {
@@ -107,6 +116,7 @@ $color-primary: #0070f3; // This is a local variable
       }
     }
   }
+
   &__burger {
     display: none;
     &_wrapper {
@@ -131,6 +141,8 @@ $color-primary: #0070f3; // This is a local variable
   height: 100vh;
   @include mobile-small {
     flex-direction: column;
+    height: unset;
+    margin-bottom: 20vh;
   }
   display: flex;
   justify-content: space-between;
@@ -142,13 +154,13 @@ $color-primary: #0070f3; // This is a local variable
     width: 50%;
     height: 100%;
     @include mobile {
-      height: 50vh;
+      // height: 50vh;
       width: 60%;
       justify-content: flex-end;
     }
     @include mobile-small {
       width: 100%;
-      margin-top: 100px;
+      margin-top: 20px;
     }
   }
   &__span {
@@ -182,12 +194,18 @@ $color-primary: #0070f3; // This is a local variable
     }
   }
   &__image_wrapper {
-    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     @include mobile-small {
       width: 100%;
+    }
+    img {
+      width: 100%;
+      height: 80%;
+      position: unset !important;
+      border-radius: 20px;
     }
   }
   h3 {
@@ -231,6 +249,9 @@ $color-primary: #0070f3; // This is a local variable
   max-width: 1100px;
   margin: 0 auto;
   height: 100vh;
+  @include mobile {
+    margin-top: 5vh;
+  }
   @include mobile-small {
     padding: 0 1rem;
   }
@@ -238,9 +259,9 @@ $color-primary: #0070f3; // This is a local variable
 
 .image {
   object-fit: cover;
-  object-position: top;
-  transform-origin: top;
-  border-radius: 30px;
+  // object-position: top;
+  // transform-origin: top;
+  // border-radius: 30px;
 }
 
 .socials {

@@ -101,9 +101,9 @@
     animation: rotation 8s infinite linear;
     grid-column: 1;
     grid-row: 1;
-    span {
-      animation: counter 8s infinite linear;
-    }
+    // span {
+    //   display: none;
+    // }
     &:nth-child(2) {
       animation-delay: -2s;
       span {
