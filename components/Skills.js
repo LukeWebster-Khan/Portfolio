@@ -21,38 +21,18 @@ const Skills = () => {
         </div>
         <div className={styles.skills__wrapper}>
           <div className={styles.skills__item}>
-            <Image
-              src="/html5.png"
-              alt="html"
-              objectFit="contain"
-              layout="fill"
-            />
+            <Image src="/html5.png" alt="html" layout="fill" />
           </div>
           <div className={styles.skills__item}>
             <span>
-              <Image
-                src="/SASS.png"
-                alt="sass"
-                objectFit="contain"
-                layout="fill"
-              />
+              <Image src="/SASS.png" alt="sass" layout="fill" />
             </span>
           </div>
           <div className={styles.skills__item}>
-            <Image
-              src="/react.png"
-              alt="react"
-              objectFit="contain"
-              layout="fill"
-            />
+            <Image src="/react.png" alt="react" layout="fill" />
           </div>
           <div className={styles.skills__item}>
-            <Image
-              src="/typescript.png"
-              alt="typescript"
-              objectFit="contain"
-              layout="fill"
-            />
+            <Image src="/typescript.png" alt="typescript" layout="fill" />
           </div>
         </div>
       </div>

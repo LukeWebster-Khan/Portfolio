@@ -16,6 +16,29 @@
   scroll-behavior: smooth;
   max-width: 600px;
   margin: 0 auto;
+  &__section {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0s ease;
+    &--visible {
+      position: relative;
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      transition: opacity 0.5s ease;
+      z-index: 2;
+    }
+    &--desc {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
   h1 {
     display: flex;
     justify-content: space-between;
@@ -35,6 +58,17 @@
   }
   &__container {
     display: flex;
+    flex-direction: column;
+  }
+  &__nav {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &-item {
+      padding: 5px 10px;
+    }
   }
   &__desc {
     font-size: 20px;
@@ -74,6 +108,10 @@
     align-items: center;
     margin-left: 20px;
     width: 100%;
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 .skills {
@@ -167,4 +205,16 @@
 .fade-enter-active,
 .fade-exit-active {
   transition: opacity 500ms;
+}
+
+// embla carousel
+.embla {
+  overflow: hidden;
+  &__container {
+    display: flex;
+  }
+  &__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
 }
